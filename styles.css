@@ -45,6 +45,8 @@ body {
   position: relative;
   overflow-x: hidden;
   cursor: url('assets/cursor-pointer-white.svg') 8 8, pointer;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 /* --- IA Dock (macOS-like) --- */
@@ -212,6 +214,18 @@ body {
   .ia-dock__legend {
     display: none;
   }
+  
+  .recognition-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-actions {
+    flex-direction: column;
+  }
+  
+  .contact-link {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 720px) {
@@ -352,7 +366,7 @@ strong {
 }
 
 section {
-  padding-block: clamp(4rem, 8vw, 7rem);
+  padding-block: clamp(2.5rem, 6vw, 7rem);
 }
 
 .wrapper {
@@ -364,7 +378,55 @@ section {
 
 @media (max-width: 680px) {
   .wrapper {
-    width: min(100% - 2rem, 100%);
+    width: min(100% - 1rem, 100%);
+    padding: 0 0.5rem;
+  }
+  
+  .hero__portrait-scene {
+    width: min(100%, 280px);
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero__visual {
+    gap: 2rem;
+  }
+  
+  .ia-dock {
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+  
+  .panel {
+    padding: 1.5rem 1rem;
+  }
+  
+  .hero__metrics {
+    gap: 1rem;
+  }
+  
+  .hero-metric {
+    padding: 1rem;
+  }
+  
+  .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.7rem;
+  }
+  
+  .hero__actions {
+    margin-top: 1.5rem;
+  }
+  
+  .site-header__shell {
+    padding: 0.8rem 1rem;
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem);
+  }
+  
+  .mobile-nav {
+    width: calc(100% - 1rem);
+    max-width: calc(100vw - 2rem);
   }
 }
 
@@ -743,7 +805,7 @@ body.nav-animated .mobile-nav a {
 
 .section-title {
   margin: 0;
-  font-size: clamp(2.5rem, 4.6vw, 3.6rem);
+  font-size: clamp(1.5rem, 4vw, 3.6rem);
   line-height: 1.1;
   color: var(--text-strong);
   font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
@@ -756,7 +818,8 @@ body.nav-animated .mobile-nav a {
 .section-subtitle {
   margin: 0;
   color: var(--text-muted);
-  max-width: 56ch;
+  max-width: 100%;
+  font-size: clamp(0.95rem, 2.2vw, 2.2rem);
 }
 
 .hero {
@@ -798,11 +861,11 @@ body.nav-animated .mobile-nav a {
 
 .hero__title {
   margin: 0;
-  font-size: clamp(2rem, 4.2vw, 3.1rem);
+  font-size: clamp(1.4rem, 3.8vw, 3.1rem);
   line-height: 1.05;
   color: var(--text-strong);
   font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-  max-width: 14ch;
+  max-width: 100%;
 }
 
 .hero__title span {
@@ -816,9 +879,9 @@ body.nav-animated .mobile-nav a {
 
 .hero__objective {
   margin: 0;
-  font-size: clamp(0.9rem, 1.8vw, 1.0rem);
+  font-size: clamp(0.85rem, 1.6vw, 1.0rem);
   color: var(--text-muted);
-  max-width: 54ch;
+  max-width: 100%;
 }
 
 .hero__typed {
@@ -839,7 +902,7 @@ body.nav-animated .mobile-nav a {
 .hero__typed-wrapper {
   display: inline-flex;
   align-items: baseline;
-  font-size: clamp(1.18rem, 2.2vw, 1.5rem);
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
   font-weight: 600;
   color: var(--text-strong);
   position: relative;
@@ -847,7 +910,7 @@ body.nav-animated .mobile-nav a {
 
 .hero__typed-text {
   white-space: nowrap;
-  font-size: clamp(0.98rem, 0.98vw, 0.98rem);
+  font-size: clamp(0.88rem, 1.2vw, 0.98rem);
   font-weight: 600;
 }
 
@@ -898,7 +961,7 @@ body.nav-animated .mobile-nav a {
 }
 
 .hero-metric__value {
-  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-size: clamp(1.4rem, 2.8vw, 2.5rem);
   font-weight: 700;
   color: var(--text-strong);
   font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
@@ -1207,7 +1270,7 @@ body.nav-animated .mobile-nav a {
 
 .hero__mission-title {
   margin: 0;
-  font-size: 1.35rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
   font-weight: 600;
   color: var(--text-strong);
   font-family: 'Chakra Petch', 'Inter Tight', sans-serif;
@@ -1272,7 +1335,7 @@ body.nav-animated .mobile-nav a {
 
 .card-title {
   margin: 0;
-  font-size: 1.55rem;
+  font-size: clamp(1.2rem, 3vw, 1.55rem);
   font-weight: 600;
   color: var(--text-strong);
   font-family: 'Chakra Petch', 'Inter Tight', sans-serif;
@@ -1618,6 +1681,43 @@ body.nav-animated .mobile-nav a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+/* Extra small mobile adjustments */
+@media (max-width: 480px) {
+  .hero__layout {
+    gap: 1.5rem;
+  }
+  
+  .section-header {
+    gap: 1rem;
+  }
+  
+  .hero__lead {
+    gap: 1rem;
+  }
+  
+  .hero__visual {
+    gap: 1.5rem;
+  }
+  
+  .hero__portrait-scene {
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero__actions {
+    margin-top: 1rem;
+  }
+  
+  .timeline__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  
+  .site-footer__grid {
+    text-align: center;
   }
 }
 
