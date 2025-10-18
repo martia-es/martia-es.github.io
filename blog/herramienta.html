@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cómo uso Warp • Marta Fernández García</title>
+    <meta
+      name="description"
+      content="Marta muestra cómo Warp acelera su trabajo en terminal con bloques reutilizables, IA integrada y sesiones compartibles."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="blog-page">
+    <header class="blog-header" aria-label="Cabecera de blog">
+      <div class="wrapper blog-header__inner">
+        <a class="blog-header__brand" href="../index.html">
+          <span class="blog-header__mark" aria-hidden="true">M</span>
+          <span>Marta • Radar IA</span>
+        </a>
+        <a class="button button--ghost blog-header__back" href="../index.html#mis-herramientas">Volver a Mis herramientas IA</a>
+      </div>
+    </header>
+    <main id="contenido" class="blog-main">
+      <article class="wrapper blog-article" data-tool-article>
+        <header class="blog-article__header">
+          <p class="eyebrow" data-tool-eyebrow>Mis herramientas IA</p>
+          <h1 data-tool-title>Cómo uso Warp para orquestar mis sesiones en terminal</h1>
+          <p class="blog-article__lede" data-tool-lede>
+            Warp es mi terminal de confianza para documentar experimentos, automatizar despliegues y mantener trazabilidad entre investigación y producción.
+          </p>
+        </header>
+        <div data-tool-sections>
+          <section class="panel blog-article__section">
+            <h2 class="card-title">Mis básicos en Warp</h2>
+            <p class="card-text">
+              Organizo mi terminal en bloques reutilizables para asegurar que cada experimento sea reproducible y fácil de auditar.
+            </p>
+            <ul class="bullet-list">
+              <li><strong>Workflows guardados:</strong> catalogo comandos y scripts recurrentes en colecciones versionadas.</li>
+              <li><strong>Atajos contextuales:</strong> configuro keybindings por proyecto para lanzar pipelines clave con un gesto.</li>
+              <li><strong>Paneles anclados:</strong> fijo splits con logs, prompts y notas para tener visibilidad completa.</li>
+            </ul>
+          </section>
+          <section class="panel blog-article__section">
+            <h2 class="card-title">Warp AI en contexto</h2>
+            <p class="card-text">
+              Uso el asistente integrado como copiloto técnico, siempre limitado por mis propios datos y estándares de seguridad.
+            </p>
+            <ul class="bullet-list">
+              <li><strong>Prompts controlados:</strong> alimento la IA con mis guías internas antes de pedir sugerencias de comandos.</li>
+              <li><strong>Respuestas contrastadas:</strong> valido cada recomendación en ambientes sandbox antes de aceptarla.</li>
+              <li><strong>Documentación instantánea:</strong> convierto sesiones en resúmenes que adjunto a mis reportes semanales.</li>
+            </ul>
+          </section>
+          <section class="panel blog-article__section">
+            <h2 class="card-title">Cómo lo comparto con equipos</h2>
+            <p class="card-text">
+              Cada proyecto vive en un documento ejecutable que otros pueden seguir paso a paso sin sorpresas.
+            </p>
+            <ul class="bullet-list">
+              <li><strong>Logs con anotaciones:</strong> exporto sesiones con comentarios para explicar decisiones clave.</li>
+              <li><strong>Tableros compartidos:</strong> sincronizo workflows con los equipos para mantener una única fuente de verdad.</li>
+              <li><strong>Entrega reproducible:</strong> acompaño cada guía con variables y checklists listos para ejecutar.</li>
+            </ul>
+          </section>
+        </div>
+        <footer class="blog-article__footer">
+          <a class="feature-link" data-tool-cta href="../index.html#contacto">¿Quieres que prepare tus workflows en Warp?</a>
+        </footer>
+        <nav class="blog-related" aria-label="Otras herramientas IA">
+          <h2 class="blog-related__title" data-tool-related-heading>Siguiente lectura</h2>
+          <ul class="blog-related__list" data-tool-related-list>
+            <li><a href="?tool=claude">Narrativas nítidas con Claude</a></li>
+            <li><a href="?tool=perplexity">Radar de mercado con Perplexity</a></li>
+            <li><a href="?tool=cursor">Automatizaciones técnicas con Cursor</a></li>
+          </ul>
+        </nav>
+      </article>
+    </main>
+    <noscript>
+      <div class="wrapper">
+        <p>Activa JavaScript para cambiar entre herramientas. Mientras tanto, se muestra la guía de Warp.</p>
+      </div>
+    </noscript>
+    <script type="module">
+      const TOOL_CONTENT = {
+        warp: {
+          name: 'Warp',
+          pageTitle: 'Cómo uso Warp • Marta Fernández García',
+          metaDescription:
+            'Marta muestra cómo Warp acelera su trabajo en terminal con bloques reutilizables, IA integrada y sesiones compartibles.',
+          eyebrow: 'Mis herramientas IA',
+          title: 'Cómo uso Warp para orquestar mis sesiones en terminal',
+          lede:
+            'Warp es mi terminal de confianza para documentar experimentos, automatizar despliegues y mantener trazabilidad entre investigación y producción.',
+          sections: [
+            {
+              heading: 'Mis básicos en Warp',
+              description:
+                'Organizo mi terminal en bloques reutilizables para asegurar que cada experimento sea reproducible y fácil de auditar.',
+              bullets: [
+                { highlight: 'Workflows guardados', text: 'catalogo comandos y scripts recurrentes en colecciones versionadas.' },
+                { highlight: 'Atajos contextuales', text: 'configuro keybindings por proyecto para lanzar pipelines clave con un gesto.' },
+                { highlight: 'Paneles anclados', text: 'fijo splits con logs, prompts y notas para tener visibilidad completa.' },
+              ],
+            },
+            {
+              heading: 'Warp AI en contexto',
+              description:
+                'Uso el asistente integrado como copiloto técnico, siempre limitado por mis propios datos y estándares de seguridad.',
+              bullets: [
+                { highlight: 'Prompts controlados', text: 'alimento la IA con mis guías internas antes de pedir sugerencias de comandos.' },
+                { highlight: 'Respuestas contrastadas', text: 'valido cada recomendación en ambientes sandbox antes de aceptarla.' },
+                { highlight: 'Documentación instantánea', text: 'convierto sesiones en resúmenes que adjunto a mis reportes semanales.' },
+              ],
+            },
+            {
+              heading: 'Cómo lo comparto con equipos',
+              description:
+                'Cada proyecto vive en un documento ejecutable que otros pueden seguir paso a paso sin sorpresas.',
+              bullets: [
+                { highlight: 'Logs con anotaciones', text: 'exporto sesiones con comentarios para explicar decisiones clave.' },
+                { highlight: 'Tableros compartidos', text: 'sincronizo workflows con los equipos para mantener una única fuente de verdad.' },
+                { highlight: 'Entrega reproducible', text: 'acompaño cada guía con variables y checklists listos para ejecutar.' },
+              ],
+            },
+          ],
+          footer: {
+            ctaText: '¿Quieres que prepare tus workflows en Warp?',
+            ctaHref: '../index.html#contacto',
+          },
+          related: {
+            heading: 'Siguiente lectura',
+            links: [
+              { tool: 'claude', label: 'Narrativas nítidas con Claude' },
+              { tool: 'perplexity', label: 'Radar de mercado con Perplexity' },
+              { tool: 'cursor', label: 'Automatizaciones técnicas con Cursor' },
+            ],
+          },
+        },
+        claude: {
+          name: 'Claude',
+          pageTitle: 'Cómo uso Claude • Marta Fernández García',
+          metaDescription:
+            'Claude es mi aliado para borrar ruido y redactar narrativas transparentes sobre inteligencia artificial.',
+          eyebrow: 'Mis herramientas IA',
+          title: 'Cómo uso Claude para crear narrativa honesta',
+          lede:
+            'Claude es mi editor de confianza cuando necesito explicar decisiones difíciles con transparencia. Me ayuda a depurar lenguaje, mantener un tono empático y asegurar que cada afirmación tenga evidencia detrás.',
+          sections: [
+            {
+              heading: 'Antes de redactar',
+              bullets: [
+                { highlight: 'Mapa de stakeholders', text: 'identifico quién recibirá el mensaje y qué nivel de detalle necesita.' },
+                { highlight: 'Checklist de hechos', text: 'preparo tablas con las fuentes y datos que respaldan cada punto.' },
+                { highlight: 'Ángulo narrativo', text: 'defino qué problema queremos resolver y qué decisiones esperamos provocar.' },
+              ],
+            },
+            {
+              heading: 'Durante la redacción',
+              bullets: [
+                { highlight: 'Iteraciones guiadas', text: 'pido titulares, resúmenes ejecutivos y versiones reducidas para distintos canales.' },
+                { highlight: 'Preguntas difíciles', text: 'solicito objeciones probables para reforzar la narrativa con datos adicionales.' },
+                { highlight: 'Tono y voz', text: 'ajusto palabras clave para que el mensaje sea directo sin perder empatía.' },
+              ],
+            },
+            {
+              heading: 'Entrega y seguimiento',
+              bullets: [
+                { highlight: 'Brief visual', text: 'genero instrucciones para piezas creativas o slides de soporte.' },
+                { highlight: 'Guion de preguntas', text: 'preparo posibles dudas del público y respuestas alineadas.' },
+                { highlight: 'Registro de versiones', text: 'documento qué cambios sugiere Claude y por qué los acepto o rechazo.' },
+              ],
+            },
+          ],
+          footer: {
+            ctaText: '¿Necesitas ayuda contando una iniciativa IA compleja?',
+            ctaHref: '../index.html#contacto',
+          },
+          related: {
+            heading: 'Explora más',
+            links: [
+              { tool: 'warp', label: 'Sesiones reproducibles con Warp' },
+              { tool: 'perplexity', label: 'Analizo ruido con Perplexity' },
+              { tool: 'cursor', label: 'Documentación técnica precisa con Cursor' },
+            ],
+          },
+        },
+        perplexity: {
+          name: 'Perplexity',
+          pageTitle: 'Cómo uso Perplexity • Marta Fernández García',
+          metaDescription:
+            'Perplexity me permite filtrar ruido y priorizar datos verificables cuando analizo el mercado de inteligencia artificial.',
+          eyebrow: 'Mis herramientas IA',
+          title: 'Cómo uso Perplexity para vigilar el mercado',
+          lede:
+            'Perplexity me ofrece respuestas con fuentes claras, perfectas para seguir cambios regulatorios y nuevos lanzamientos sin perder tiempo navegando entre pestañas.',
+          sections: [
+            {
+              heading: 'Flujos de investigación',
+              bullets: [
+                { highlight: 'Alertas semanales', text: 'monitorizo términos clave de IA responsable y comparo resultados con mis notas internas.' },
+                { highlight: 'Due diligence rápida', text: 'valido claims de proveedores revisando referencias y artículos adjuntos.' },
+                { highlight: 'Resúmenes multi-idioma', text: 'obtengo traducciones con contexto para combinar fuentes globales.' },
+              ],
+            },
+            {
+              heading: 'Cómo lo mantengo fiable',
+              bullets: [
+                { highlight: 'Etiquetas de confianza', text: 'clasifico fuentes en alta, media o baja credibilidad antes de compartir hallazgos.' },
+                { highlight: 'Comparación cruzada', text: 'pido al modelo que contraste sus conclusiones con informes oficiales.' },
+                { highlight: 'Registro de fuentes', text: 'guardo los enlaces útiles para consultarlos en sesiones con clientes.' },
+              ],
+            },
+            {
+              heading: 'Cuándo lo combino con otras herramientas',
+              bullets: [
+                { highlight: 'Con Warp', text: 'transformo insights en scripts reproducibles para que el equipo actúe rápido.' },
+                { highlight: 'Con Claude', text: 'preparo comunicados y newsletters que explican los hallazgos sin hype.' },
+                { highlight: 'Con Cursor', text: 'creo scripts para procesar datasets citados en los informes.' },
+              ],
+            },
+          ],
+          footer: {
+            ctaText: '¿Quieres que prepare un radar de señales para tu sector?',
+            ctaHref: '../index.html#contacto',
+          },
+          related: {
+            heading: 'Continúa leyendo',
+            links: [
+              { tool: 'warp', label: 'Workflows reproducibles con Warp' },
+              { tool: 'claude', label: 'Edición cuidadosa con Claude' },
+              { tool: 'cursor', label: 'Experimentos técnicos con Cursor' },
+            ],
+          },
+        },
+        cursor: {
+          name: 'Cursor',
+          pageTitle: 'Cómo uso Cursor • Marta Fernández García',
+          metaDescription:
+            'Cursor es mi laboratorio de prototipos para validar ideas técnicas y automatizar tareas repetitivas con IA.',
+          eyebrow: 'Mis herramientas IA',
+          title: 'Cómo uso Cursor para prototipar con IA',
+          lede:
+            'Cursor es el estudio donde pruebo integraciones, escribo código asistido y valido ideas en cuestión de horas. Lo trato como un laboratorio controlado con repositorios descartables y métricas claras.',
+          sections: [
+            {
+              heading: 'Configuración inicial',
+              bullets: [
+                { highlight: 'Repositorios espejo', text: 'creo copias de mis proyectos para experimentar sin tocar producción.' },
+                { highlight: 'Plantillas de prompts', text: 'documento instrucciones para pruebas de APIs, scraping y análisis de datos.' },
+                { highlight: 'Checklist de calidad', text: 'defino criterios de aceptación antes de automatizar cualquier paso.' },
+              ],
+            },
+            {
+              heading: 'Cómo trabajo día a día',
+              bullets: [
+                { highlight: 'Asistente contextual', text: 'uso el chat integrado para explicar el propósito del script y pedir iteraciones rápidas.' },
+                { highlight: 'Diffs controlados', text: 'reviso cada sugerencia y solo acepto cambios con cobertura de pruebas.' },
+                { highlight: 'Integraciones vivas', text: 'conecto repos de documentación para que el asistente aprenda mis estándares.' },
+              ],
+            },
+            {
+              heading: 'Qué resultados consigo',
+              bullets: [
+                { highlight: 'Prototipos en horas', text: 'paso de idea a demo con scripts reproducibles y pasos documentados.' },
+                { highlight: 'Auditoría sencilla', text: 'dejo comentarios que explican por qué acepté cada cambio propuesto.' },
+                { highlight: 'Automatizaciones seguras', text: 'despliego tareas recurrentes con alertas que reviso semanalmente.' },
+              ],
+            },
+          ],
+          footer: {
+            ctaText: '¿Quieres que diseñemos un laboratorio IA parecido?',
+            ctaHref: '../index.html#contacto',
+          },
+          related: {
+            heading: 'También uso',
+            links: [
+              { tool: 'warp', label: 'Warp para acelerar terminales' },
+              { tool: 'claude', label: 'Claude para pulir comunicación' },
+              { tool: 'perplexity', label: 'Perplexity para vigilar el mercado' },
+            ],
+          },
+        },
+      };
+
+      const DEFAULT_TOOL = 'warp';
+
+      const searchParams = new URLSearchParams(window.location.search);
+      const rawTool = searchParams.get('tool');
+      const normalizedTool = rawTool ? rawTool.toLowerCase() : DEFAULT_TOOL;
+      const toolKey = Object.prototype.hasOwnProperty.call(TOOL_CONTENT, normalizedTool) ? normalizedTool : DEFAULT_TOOL;
+
+      if (toolKey !== normalizedTool) {
+        searchParams.set('tool', DEFAULT_TOOL);
+        const nextUrl = `${window.location.pathname}?${searchParams.toString()}`;
+        window.history.replaceState({}, '', nextUrl);
+      }
+
+      const toolData = TOOL_CONTENT[toolKey];
+
+      const titleElement = document.querySelector('[data-tool-title]');
+      const ledeElement = document.querySelector('[data-tool-lede]');
+      const eyebrowElement = document.querySelector('[data-tool-eyebrow]');
+      const sectionsContainer = document.querySelector('[data-tool-sections]');
+      const ctaElement = document.querySelector('[data-tool-cta]');
+      const relatedHeading = document.querySelector('[data-tool-related-heading]');
+      const relatedList = document.querySelector('[data-tool-related-list]');
+
+      document.title = toolData.pageTitle;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', toolData.metaDescription);
+      }
+
+      if (eyebrowElement) {
+        eyebrowElement.textContent = toolData.eyebrow;
+      }
+
+      if (titleElement) {
+        titleElement.textContent = toolData.title;
+      }
+
+      if (ledeElement) {
+        ledeElement.textContent = toolData.lede;
+      }
+
+      if (sectionsContainer) {
+        sectionsContainer.innerHTML = '';
+        toolData.sections.forEach((section) => {
+          const sectionNode = document.createElement('section');
+          sectionNode.className = 'panel blog-article__section';
+
+          const heading = document.createElement('h2');
+          heading.className = 'card-title';
+          heading.textContent = section.heading;
+          sectionNode.appendChild(heading);
+
+          if (section.description) {
+            const description = document.createElement('p');
+            description.className = 'card-text';
+            description.textContent = section.description;
+            sectionNode.appendChild(description);
+          }
+
+          if (section.bullets && section.bullets.length > 0) {
+            const list = document.createElement('ul');
+            list.className = 'bullet-list';
+            section.bullets.forEach((bullet) => {
+              const item = document.createElement('li');
+              const strong = document.createElement('strong');
+              strong.textContent = `${bullet.highlight}:`;
+              item.appendChild(strong);
+              item.append(document.createTextNode(` ${bullet.text}`));
+              list.appendChild(item);
+            });
+            sectionNode.appendChild(list);
+          }
+
+          sectionsContainer.appendChild(sectionNode);
+        });
+      }
+
+      if (ctaElement) {
+        ctaElement.textContent = toolData.footer.ctaText;
+        ctaElement.setAttribute('href', toolData.footer.ctaHref);
+      }
+
+      if (relatedHeading) {
+        relatedHeading.textContent = toolData.related.heading;
+      }
+
+      if (relatedList) {
+        relatedList.innerHTML = '';
+        toolData.related.links.forEach((link) => {
+          const listItem = document.createElement('li');
+          const anchor = document.createElement('a');
+          anchor.setAttribute('href', `?tool=${link.tool}`);
+          anchor.textContent = link.label;
+          listItem.appendChild(anchor);
+          relatedList.appendChild(listItem);
+        });
+      }
+    </script>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
