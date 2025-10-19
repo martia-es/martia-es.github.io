@@ -1,2 +1,2 @@
 run:
-	python3 -m http.server 5173
+	python3 -m http.server 3000
