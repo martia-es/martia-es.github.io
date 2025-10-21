@@ -27,6 +27,7 @@ export const initPageInteractions = () => {
   bindSmoothLinks(document);
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobile = window.innerWidth <= 720;
 
   const runNavReveal = () => {
     if (document.body.classList.contains('nav-animated')) return;
@@ -111,8 +112,8 @@ export const initPageInteractions = () => {
   const iaDockTemplate = document.querySelector('#iaDockTemplate');
   if (iaDock && iaDockList && iaDockTemplate) {
     const items = Array.from(iaDockTemplate.content.children).filter((n) => n.classList?.contains('ia-dock__item'));
-    // If reduced motion, append all at once
-    if (prefersReducedMotion) {
+    // If reduced motion or mobile, append all at once
+    if (prefersReducedMotion || isMobile) {
       items.forEach((node) => {
         const clone = node.cloneNode(true);
         clone.classList.add('is-visible');
@@ -154,7 +155,7 @@ export const initPageInteractions = () => {
       moveCursorTo(startPoint.x, startPoint.y);
       cursor.style.opacity = '1';
 
-      const animateTo = (to, duration = 420) => new Promise((resolve) => {
+      const animateTo = (to, duration = 250) => new Promise((resolve) => {
         const fromRect = cursor.getBoundingClientRect();
         const from = { x: fromRect.left, y: fromRect.top };
         const start = performance.now();
@@ -187,10 +188,10 @@ export const initPageInteractions = () => {
         menu.style.top = `${Math.min(window.innerHeight - 80, cRect.top + 8)}px`;
         menu.classList.add('is-open');
         // Brief pause to mimic right-click
-        await new Promise((r) => setTimeout(r, 200));
+        await new Promise((r) => setTimeout(r, 100));
         // Click paste (auto)
         paste.classList.add('is-accent');
-        await new Promise((r) => setTimeout(r, 180));
+        await new Promise((r) => setTimeout(r, 90));
         menu.classList.remove('is-open');
         const clone = items[stepIndex].cloneNode(true);
         iaDockList.appendChild(clone);
@@ -199,7 +200,7 @@ export const initPageInteractions = () => {
           clone.classList.add('is-visible');
         });
         stepIndex += 1;
-        setTimeout(placeNext, 260);
+        setTimeout(placeNext, 130);
       };
 
       placeNext();
@@ -467,7 +468,7 @@ export const initPageInteractions = () => {
   
   // Global cursor-following label: "human"
   const cursorLabel = document.querySelector('.cursor-label');
-  if (cursorLabel) {
+  if (cursorLabel && !isMobile) {
     let hideTimer = null;
     const showFor = 1200; // ms to keep visible after movement
     const updatePosition = (x, y) => {
