@@ -74,7 +74,8 @@
           "sameAs": [
             "https://twitter.com/martia_es",
             "https://www.linkedin.com/in/martafernandezgarcia-ia/",
-            "https://medium.com/@martia_es"
+            "https://medium.com/@martia_es",
+            "https://www.youtube.com/@martia_es"
           ],
           "jobTitle": "AI Teach Lead Engineer",
           "worksFor": {
@@ -206,7 +207,11 @@
           </a>
           <a class="nav-link" href="#experiencia" style="--nav-index: 2">Experiencia</a>
           <a class="nav-link" href="#redes" style="--nav-index: 3">Redes</a>
-          <a class="nav-link" href="#contacto" style="--nav-index: 4">Contacto</a>
+          <a class="nav-link nav-link--highlight" href="#ideas" style="--nav-index: 4">
+            Ideas
+            <span class="nav-link__badge nav-link__badge--pulse" aria-hidden="true">NEW</span>
+          </a>
+          <a class="nav-link" href="#contacto" style="--nav-index: 5">Contacto</a>
         </nav>
       </aside>
 
@@ -264,7 +269,7 @@
                   </article>
                   <article class="hero-metric">
                     <span class="hero-metric__label">Newsletter</span>
-                    <span class="hero-metric__value">6k</span>
+                    <span class="hero-metric__value">7k</span>
                     <p class="hero-metric__note">Novedades de políticas y tecnología para profesionales.</p>
                   </article>
                 </div>
@@ -303,6 +308,49 @@
                   </ul>
                 </article>
               </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="hero-videos" aria-label="Vídeos destacados" data-highlight>
+          <div class="wrapper">
+            <div class="hero-videos__panel panel" data-animate data-animate-delay="160">
+              <header class="hero-videos__header">
+                <span class="eyebrow">Mira cómo trabajo</span>
+                <h2 class="hero-videos__title">Vídeos recientes</h2>
+                <p class="hero-videos__subtitle">Empieza con mi último breakdown en directo; iré añadiendo más sesiones pronto.</p>
+              </header>
+              <div class="video-carousel" data-video-carousel>
+                <div class="video-carousel__viewport" id="heroVideoCarouselViewport" data-video-viewport>
+                  <article
+                    class="video-slide is-active"
+                    data-video-slide
+                    data-video-src="https://www.youtube.com/embed/QXHmJHkEq0k?start=12&rel=0&modestbranding=1"
+                  >
+                    <div class="video-frame">
+                      <iframe
+                        title="Demo de cómo aterrizo IA sin humo"
+                        src="https://www.youtube.com/embed/QXHmJHkEq0k?start=12&rel=0&modestbranding=1"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy"
+                      ></iframe>
+                    </div>
+                    <footer class="video-slide__caption">
+                      Desmontando hype en directo con casos reales.
+                    </footer>
+                  </article>
+                </div>
+                <div class="video-carousel__controls">
+                  <button type="button" class="video-carousel__nav video-carousel__nav--prev" data-video-prev aria-label="Vídeo anterior">
+                    <span aria-hidden="true">←</span>
+                  </button>
+                  <button type="button" class="video-carousel__nav video-carousel__nav--next" data-video-next aria-label="Vídeo siguiente">
+                    <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div class="video-carousel__dots" data-video-dots role="tablist" aria-label="Seleccionar vídeo"></div>
+              </div>
             </div>
           </div>
         </section>
@@ -433,6 +481,13 @@
                   rel="noopener noreferrer"
                   aria-label="Perfil de Medium"
                 >Medium</a>
+                <a
+                  class="contact-link"
+                  href="https://www.youtube.com/@martia_es"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Canal de YouTube"
+                >YouTube</a>
               </div>
 
               <div class="social-reads" data-animate data-animate-delay="140">
@@ -474,6 +529,59 @@
           </div>
         </section>
 
+        <section id="ideas">
+          <div class="wrapper">
+            <div class="panel" data-animate>
+              <header class="section-header">
+                <span class="eyebrow">Ideas de contenido</span>
+                <h2 class="section-title">¿Qué te gustaría que trate en LinkedIn o YouTube?</h2>
+                <p class="section-subtitle">Déjame tu idea y me llegará por correo. Puedo mencionarte cuando la publique.</p>
+              </header>
+              <form class="ideas-form" data-ideas-form data-form-endpoint="https://formspree.io/f/mgvrewwz" novalidate>
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="idea-nombre">Nombre (opcional)</label>
+                    <input id="idea-nombre" name="nombre" type="text" autocomplete="name" class="input" />
+                  </div>
+                  <div class="form-field">
+                    <label for="idea-email">Email (opcional, para avisarte)</label>
+                    <input id="idea-email" name="email" type="email" autocomplete="email" inputmode="email" class="input" />
+                  </div>
+                  <div class="form-field">
+                    <label for="idea-canal">Canal</label>
+                    <select id="idea-canal" name="canal" class="input">
+                      <option value="linkedin" selected>LinkedIn</option>
+                      <option value="youtube">YouTube</option>
+                      <option value="indistinto">Indistinto</option>
+                    </select>
+                  </div>
+                  <div class="form-field form-field--full">
+                    <label for="idea-texto">Tu idea o pregunta</label>
+                    <textarea id="idea-texto" name="idea" required rows="5" class="textarea" placeholder="Cuéntame el tema, contexto y por qué es útil."></textarea>
+                    <p class="help-text">Sé específico. Ej: “Políticas de IA en pymes: qué exigir a proveedores”.</p>
+                  </div>
+                  <div class="form-field form-field--full">
+                    <label class="checkbox">
+                      <input type="checkbox" name="permiso-mencion" value="si" />
+                      <span>Si la uso, puedes mencionarme</span>
+                    </label>
+                  </div>
+                  <div class="hp-field" aria-hidden="true">
+                    <label>Deja esto vacío</label>
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" />
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="button button--primary" data-submit>
+                    Enviar idea
+                  </button>
+                  <span class="form-status" role="status" aria-live="polite" data-status></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
         <section id="contacto">
           <div class="wrapper">
             <div class="panel" data-animate>
@@ -502,7 +610,9 @@
             <span>/</span>
             <a href="https://x.com/martia_es" target="_blank" rel="noopener noreferrer">@marta</a>
             <span>/</span>
-            <a href="https://www.linkedin.com/in/martafernandezgarcia-ia/ target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/martafernandezgarcia-ia/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span>/</span>
+            <a href="https://www.youtube.com/@martia_es" target="_blank" rel="noopener noreferrer">YouTube</a>
           </div>
         </div>
       </footer>
